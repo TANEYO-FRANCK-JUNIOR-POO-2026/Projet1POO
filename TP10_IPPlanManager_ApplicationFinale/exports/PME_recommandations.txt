@@ -1,0 +1,5 @@
+===== RECOMMANDATIONS IPPLAN-MANAGER =====
+
+[ELEVEE] Isolation du WiFi : Le VLAN WIFI_INVITES doit etre isole des VLANs internes sensibles.
+[ELEVEE] Acces VLAN Administration restreint : Le VLAN ADMINISTRATION doit etre accessible aux administrateurs uniquement.
+[ELEVEE] Protection du VLAN Serveurs : Le VLAN SERVEURS doit etre protege par des ACL et surveille en priorite.

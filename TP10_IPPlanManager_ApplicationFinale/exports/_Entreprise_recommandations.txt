@@ -1,0 +1,5 @@
+===== RECOMMANDATIONS IPPLAN-MANAGER =====
+
+[MOYENNE] Marge d'adresses insuffisante : Le VLAN TECHNIQUE a une marge de seulement 6 adresses. Prevoir un sous-reseau plus grand.
+[MOYENNE] Marge d'adresses insuffisante : Le VLAN CAMERAS a une marge de seulement 2 adresses. Prevoir un sous-reseau plus grand.
+[MOYENNE] Marge d'adresses insuffisante : Le VLAN DIRECTION a une marge de seulement 5 adresses. Prevoir un sous-reseau plus grand.

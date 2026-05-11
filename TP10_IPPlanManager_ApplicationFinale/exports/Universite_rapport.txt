@@ -1,0 +1,31 @@
+===== RAPPORT TECHNIQUE IPPLAN-MANAGER =====
+
+1. Besoins exprimes par l'utilisateur
+- ETUDIANTS : 500 hotes
+- WIFI_INVITES : 200 hotes
+- ENSEIGNANTS : 120 hotes
+- LABORATOIRES : 60 hotes
+- SERVEURS : 30 hotes
+
+2. Plan d'adressage propose
+- ETUDIANTS : 10.10.0.0/23 | Demandes : 500 | Capacite : 510 | Marge : 10
+- WIFI_INVITES : 10.10.2.0/24 | Demandes : 200 | Capacite : 254 | Marge : 54
+- ENSEIGNANTS : 10.10.3.0/25 | Demandes : 120 | Capacite : 126 | Marge : 6
+- LABORATOIRES : 10.10.3.128/26 | Demandes : 60 | Capacite : 62 | Marge : 2
+- SERVEURS : 10.10.3.192/27 | Demandes : 30 | Capacite : 30 | Marge : 0
+
+3. VLANs proposes
+- VLAN 10 | ETUDIANTS | 10.10.0.0/23
+- VLAN 20 | WIFI_INVITES | 10.10.2.0/24
+- VLAN 30 | ENSEIGNANTS | 10.10.3.0/25
+- VLAN 40 | LABORATOIRES | 10.10.3.128/26
+- VLAN 50 | SERVEURS | 10.10.3.192/27
+
+4. Recommandations techniques
+- [MOYENNE] VLAN de grande taille : Le VLAN ETUDIANTS possede une grande capacite. Il faut surveiller les broadcasts.
+- [ELEVEE] Isolation du WiFi : Le VLAN WIFI_INVITES doit etre isole des VLANs internes sensibles.
+- [MOYENNE] VLAN de grande taille : Le VLAN WIFI_INVITES possede une grande capacite. Il faut surveiller les broadcasts.
+- [MOYENNE] Marge d'adresses insuffisante : Le VLAN ENSEIGNANTS a une marge de seulement 6 adresses. Prevoir un sous-reseau plus grand.
+- [MOYENNE] Marge d'adresses insuffisante : Le VLAN LABORATOIRES a une marge de seulement 2 adresses. Prevoir un sous-reseau plus grand.
+- [ELEVEE] Protection du VLAN Serveurs : Le VLAN SERVEURS doit etre protege par des ACL et surveille en priorite.
+- [MOYENNE] Marge d'adresses insuffisante : Le VLAN SERVEURS a une marge de seulement 0 adresses. Prevoir un sous-reseau plus grand.
